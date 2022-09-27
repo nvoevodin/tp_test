@@ -1,24 +1,14 @@
-This is a documentation for the Trevor Project Engineering Task
+## This is a documentation for the Trevor Project Engineering Task
 
 [[_TOC_]]
 
-#Task Overview
+# Task Overview
 
+This project is a test to answer the below:
 
-1. There are 2 tabular format csvs (1 with user info, 2nd with their login and logout info)
-2. Load the files into Google's BigQuery environment
-3. Access and extract and transform that data using Python
-4. The transformation should result in a user dataframe that answers the following:
-    - Has user info (user_id, email, email_domain, account_created_date,account_created_year)
-    - A field indicating the largest number of users that have been logged on at the same time as each user
-    - A field indicating each user’s total logged in time
-    - A field indicating each user’s most-active time of day (morning, afternoon, evening, night)
-5. The resulting data must be loaded back into BigQuery as a new view and made available to the requestor
-6. Code artifacts must be made available and shared via GitHub
+# Requirements
 
-#Requirements
-
-##Business Requirements
+## Business Requirements
 
 1. Requestor: Trevor Project
 2. What problem the project aims to solve
@@ -34,7 +24,7 @@ This is a documentation for the Trevor Project Engineering Task
     6. Code artifacts must be made available and shared via GitHub
 3. Start Date: 09-23-2022 Deadline: 09-28-2022
 
-##Technical Requirements
+## Technical Requirements
 
 1. Technology used: BigQuery, Python, SQL, GitHub, VsCode
 2. Permissions/access to folders required and where obtained: JSON File in the repo is needed to access the BigQuery project
@@ -42,7 +32,7 @@ This is a documentation for the Trevor Project Engineering Task
 4. Code location: https://github.com/nvoevodin/tp_test.git
 
 
-##Personnel Requirements
+## Personnel Requirements
 
 | Name | Role | Email |
 |--|--|--|
@@ -51,7 +41,8 @@ This is a documentation for the Trevor Project Engineering Task
 
 
 
-#Development Workflow
+# Development Workflow
+
 This task requires building an ETL pipeline. Here are the steps:
 1. Since the initial datasets were emailed, the BQ ingestion was manual.
 2. I created a sandbox account and loaded the datasets as 2 separate tables.
@@ -62,7 +53,7 @@ This task requires building an ETL pipeline. Here are the steps:
 7. Once all transformations were complete, I used BQ python API to create and load the result table back into BQ
 8. I also created a view that will reflect the main (final) table. 
 
-#Use Workflow
+# Use Workflow
 
 The main usecase is the VIEW. Here is a simple sample:
 
@@ -79,6 +70,7 @@ The main usecase is the VIEW. Here is a simple sample:
 
 
 There a 2 main files in this repo:
+
 1. tp_book.ipynb a jupyter notebook - main file 
 2. raw_code.py a .py script aimed for automation
 
@@ -96,7 +88,8 @@ Once all packages and dependencies are installed, the notebook should run as exp
 
 Feel free to reach out if you are having any issues with running the notebook.
 
-#Data Classification
+# Data Classification
+
 Data Specs of the final view:
 
 | Field Name | Type | 
@@ -118,6 +111,7 @@ Data Specs of the final view:
 | evening_ratio | Float |
 
 
-#Authentication
-John Davies was assigned Read-Access to the View 
+# Authentication
+
+John Davies was assigned Read-Access to the tp-test-project-363423.test_data_repo.final_view 
 
