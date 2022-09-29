@@ -22,7 +22,7 @@ dirname = os.getcwd()
 try: 
     db = create_engine(
     'bigquery://',
-    credentials_path= dirname + '/tp-test-project-363423-00af74cfbd4d.json') # This will need to be changed to you auth file or request mine
+    credentials_path= dirname + '/token.json') # This will need to be changed to you auth file or request mine
     
 except Exception as e: print(e)
 
@@ -293,7 +293,7 @@ users_df_result.head(5)
 
 # Connecting to the API
 credentials = service_account.Credentials.from_service_account_file(
-    dirname + '/tp-test-project-363423-00af74cfbd4d.json', scopes=["https://www.googleapis.com/auth/cloud-platform"],
+    dirname + '/token.json', scopes=["https://www.googleapis.com/auth/cloud-platform"],
 )
 
 # Initiating a session
